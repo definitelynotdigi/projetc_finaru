@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Project | Finairu</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="entry-screen" class="pixel-box">
+        <h1 class="blink">Project:</h1>
+        <h2 class="blink">Finairu</h2>
+        <button class="pixel-btn green" onclick="showLogin()">START GAME</button>
+    </div>
+
+    <div id="auth-container" class="pixel-box hidden">
+        <span class="close-btn" onclick="goBack()">&times;</span>
+
+        <form id="login-form">
+            <h2>LOGIN</h2>
+            <input type="text" name="username" class="pixel-input" placeholder="USERNAME" required>
+            <input type="password" name="password" class="pixel-input" placeholder="PASSWORD" required>
+            <input type="hidden" name="action" value="login">
+            <div class="pixel-footer">
+                <a href="#" class="pixel-link">HELP?</a>
+            </div>
+
+            <button type="submit" class="pixel-btn blue">CONTINUE</button>
+            <button class="pixel-btn gray" onclick="loginGuest()">GUEST MODE</button>
+            
+            <p class="small-text">NO ACCOUNT? <span class="pixel-link" onclick="toggleAuth()">NEW HERO</span></p>
+        </form>
+
+        <form id="signup-form" class="hidden">
+            <h2>CREATE ACCOUNT</h2>
+                <input type="email" name="email" class="pixel-input" placeholder="EMAIL" required>
+                <input type="text" name="username" class="pixel-input" placeholder="USERNAME" required>
+                <input type="password" name="password" class="pixel-input" placeholder="PASSWORD" required>
+                <input type="hidden" name="action" value="signup">
+    
+                <button type="submit" class="pixel-btn green">CREATE</button>
+                <p class="small-text">HAVE SAVE? <span class="pixel-link" onclick="toggleAuth()">LOGIN</span></p>
+        </form>
+        
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
